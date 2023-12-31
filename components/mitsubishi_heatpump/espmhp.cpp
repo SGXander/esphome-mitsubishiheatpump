@@ -422,6 +422,8 @@ void MitsubishiHeatPump::hpSettingsChanged() {
         return;
     }
 
+    ESP_LOGD(TAG, "Settings - Raw Data Received: %s", currentSettings.raw);
+
     /*
      * ************ HANDLE POWER AND MODE CHANGES ***********
      * https://github.com/geoffdavis/HeatPump/blob/stream/src/HeatPump.h#L125
