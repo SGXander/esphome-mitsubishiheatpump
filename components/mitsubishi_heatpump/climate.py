@@ -144,5 +144,5 @@ def to_code(config):
     cg.add_library(
         name="HeatPump",
         repository="https://github.com/SGXander/HeatPump",
-        version="94108079261963dd1bfcdae9bb7d28b46e319c9c",
+        version="fc10b61f811d227f762deb63af63074791fe2489",
     )
