@@ -194,6 +194,9 @@ void MitsubishiHeatPump::on_horizontal_swing_change(const std::string &swing) {
     if (swing == "swing") {
         hp->setWideVaneSetting("SWING");
         updated = true;
+    } else if (swing == "auto") {
+        hp->setWideVaneSetting("AUTO");
+        updated = true;
     } else if (swing == "split") {
         hp->setWideVaneSetting("<>");
         updated = true;
@@ -526,6 +529,8 @@ void MitsubishiHeatPump::hpSettingsChanged() {
 
     if (strcmp(currentSettings.wideVane, "SWING") == 0) {
         this->update_swing_horizontal("swing");
+    } else if (strcmp(currentSettings.wideVane, "AUTO") == 0) {
+        this->update_swing_horizontal("auto");
     } else if (strcmp(currentSettings.wideVane, "<>") == 0) {
         this->update_swing_horizontal("split");
     } else if (strcmp(currentSettings.wideVane, "<<") == 0) {
